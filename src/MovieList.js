@@ -1,14 +1,10 @@
 import React from 'react';
+import MovieItem from './MovieItem';
 
 export default function MovieList({ movies }) {
   return <div className='movie-list'>
     { 
-      movies.map(movie => 
-        <div className="movie" key={movie.style + movie.flavor}>
-          <p>{movie.title}</p>
-          <p>{movie.release_year}</p>
-          <p>{movie.avg_rating}</p>
-        </div>
+      movies.map(movie => <MovieItem key={movie.title} movie={movie} />
       )
     }
 
