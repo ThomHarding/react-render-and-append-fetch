@@ -5,10 +5,10 @@ export default function ColourItem({
   hexCode,
   frequency
 }) {
-  return <div
+  return <li
     className='colour-item'>
     <h3>{name}</h3>
     <p>hex code {hexCode}</p>
     <p>light frequency: {frequency} nanometers</p>
-  </div>;
+  </li>;
 }

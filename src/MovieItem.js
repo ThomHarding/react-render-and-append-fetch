@@ -5,10 +5,10 @@ export default function MovieItem({
   release_year,
   avg_rating
 }) {
-  return <div
+  return <li
     className='movie-item'>
     <h3>{title}</h3>
     <p>released {release_year}</p>
     <p>average rating: {avg_rating}</p>
-  </div>;
+  </li>;
 }

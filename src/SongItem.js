@@ -5,10 +5,10 @@ export default function SongItem({
   artist,
   release_date
 }) {
-  return <div
+  return <li
     className='song-item'>
     <h3>{title}</h3>
     <p>by {artist}</p>
     <p>released {release_date}</p>
-  </div>;
+  </li>;
 }
