@@ -4,15 +4,15 @@ import MovieList from './MovieList';
 import { getAllMovies } from './services/fetch-utils';
 import CandyList from './CandyList';
 import { getAllCandies } from './services/fetch-utils';
-// import ColourList from './ColourList';
-// import { getAllColours } from './services/fetch-utils';
+import ColourList from './ColourList';
+import { getAllColours } from './services/fetch-utils';
 // import SongList from './SongList';
 // import { getAllSongs } from './services/fetch-utils';
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [candies, setCandies] = useState([]);
-  // const [colours, setColours] = useState([]);
+  const [colours, setColours] = useState([]);
   // const [songs, setSongs] = useState([]);
 
   useEffect(async () => {
@@ -20,11 +20,14 @@ function App() {
     setMovies(movieResponse);
     const candyResponse = await getAllCandies();
     setCandies(candyResponse);
+    const colourResponse = await getAllColours();
+    setColours(colourResponse);
   }, []);
   return (
     <div className="App">
       <MovieList movies={movies} />
       <CandyList candies={candies} />
+      <ColourList colours={colours} />
     </div>
   );
 }
